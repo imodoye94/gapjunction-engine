@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gapjunction.dev/schemas/runtime.schema.json",
+  "title": "GapJunction RuntimeTarget",
+  "description": "Where this channel is intended to run.",
+  "type": "object",
+  "properties": {
+    "target": {
+      "type": "string",
+      "enum": ["onprem", "cloud"]
+    }
+  },
+  "required": ["target"],
+  "additionalProperties": false
+}

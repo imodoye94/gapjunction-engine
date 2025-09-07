@@ -1,0 +1,33 @@
+{
+  "name": "@gapjunction/redactor-core",
+  "version": "0.1.0",
+  "description": "Core redaction utilities for sensitive data in GapJunction",
+  "license": "MPL-2.0",
+  "author": "GapJunction Team",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "keywords": [
+    "redaction",
+    "privacy",
+    "security",
+    "gapjunction"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}

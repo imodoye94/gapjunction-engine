@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "channelId": "demo-minimal",
+  "title": "Minimal Demo",
+  "runtime": { "target": "onprem" },
+  "stages": [
+    { "id": "a", "nexonId": "tcp.listener", "position": { "x": 100, "y": 100 } },
+    { "id": "b", "nexonId": "http.request", "position": { "x": 400, "y": 100 } }
+  ],
+  "edges": [
+    { "id": "e1", "from": { "stageId": "a" }, "to": { "stageId": "b" } }
+  ]
+}

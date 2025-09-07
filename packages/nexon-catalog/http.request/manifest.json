@@ -1,0 +1,92 @@
+{
+  "id": "http.request",
+  "version": "1.0.0",
+  "title": "HTTP Request",
+  "description": "Make HTTP requests to external APIs and services",
+  "author": "GapJunction Team",
+  "license": "MIT",
+  "capabilities": {
+    "network": {
+      "httpOut": true
+    }
+  },
+  "parameters": {
+    "url": {
+      "type": "string",
+      "title": "URL",
+      "description": "The URL to make the request to",
+      "required": true,
+      "validation": {
+        "pattern": "^https?://.+"
+      },
+      "ui": {
+        "widget": "text",
+        "placeholder": "https://api.example.com/endpoint"
+      }
+    },
+    "method": {
+      "type": "string",
+      "title": "HTTP Method",
+      "description": "The HTTP method to use",
+      "required": false,
+      "default": "GET",
+      "validation": {
+        "enum": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"]
+      },
+      "ui": {
+        "widget": "select"
+      }
+    },
+    "headers": {
+      "type": "object",
+      "title": "Headers",
+      "description": "HTTP headers to include in the request",
+      "required": false,
+      "ui": {
+        "widget": "textarea",
+        "help": "JSON object with header key-value pairs"
+      }
+    },
+    "payload": {
+      "type": "object",
+      "title": "Request Body",
+      "description": "The request body payload",
+      "required": false,
+      "ui": {
+        "widget": "textarea",
+        "help": "JSON object or string for the request body"
+      }
+    },
+    "timeout": {
+      "type": "number",
+      "title": "Timeout (ms)",
+      "description": "Request timeout in milliseconds",
+      "required": false,
+      "default": 30000,
+      "validation": {
+        "min": 1000,
+        "max": 300000
+      },
+      "ui": {
+        "widget": "number"
+      }
+    },
+    "apiKey": {
+      "type": "secretRef",
+      "title": "API Key",
+      "description": "API key for authentication",
+      "required": false,
+      "ui": {
+        "widget": "password",
+        "help": "Reference to secret containing API key"
+      }
+    }
+  },
+  "compatibility": {
+    "minCompilerVersion": "1.0.0",
+    "nodeRedVersion": "3.0.0",
+    "dependencies": {
+      "node-red-node-http-request": "^0.2.0"
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "gapjunction-engine",
+  "version": "0.1.0",
+  "description": "An open-source AI-native data integration engine for healthcare and life science businesses",
+  "type": "module",
+  "private": true,
+  "license": "MPL-2.0",
+  "packageManager": "pnpm@8.15.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=8.15.0"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,yaml,yml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,yaml,yml}\"",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean",
+    "clean:all": "pnpm clean && rm -rf node_modules && rm -rf .turbo",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@types/node": "^22.5.4",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "eslint": "^9.10.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-security": "^3.0.1",
+    "eslint-plugin-vitest": "^0.5.4",
+    "husky": "^9.1.5",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "turbo": "^2.1.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.0.5"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yaml,yml}": [
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/gapjunction-engine.git"
+  },
+  "keywords": [
+    "data-integration",
+    "healthcare",
+    "life-sciences",
+    "ai-native",
+    "monorepo",
+    "typescript"
+  ],
+  "author": "GapJunction Team",
+  "bugs": {
+    "url": "https://github.com/your-org/gapjunction-engine/issues"
+  },
+  "homepage": "https://github.com/your-org/gapjunction-engine#readme"
+}

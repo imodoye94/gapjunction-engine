@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gapjunction.dev/schemas/edge.schema.json",
+  "title": "GapJunction Edge",
+  "description": "A directed wire between two Stage ports.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique within the channel.",
+      "minLength": 1
+    },
+    "from": {
+      "type": "object",
+      "description": "Source stage and optional outlet (port).",
+      "properties": {
+        "stageId": { "type": "string", "minLength": 1 },
+        "outlet": { "type": "string", "minLength": 1 }
+      },
+      "required": ["stageId"],
+      "additionalProperties": false
+    },
+    "to": {
+      "type": "object",
+      "description": "Destination stage and optional inlet (port).",
+      "properties": {
+        "stageId": { "type": "string", "minLength": 1 },
+        "inlet": { "type": "string", "minLength": 1 }
+      },
+      "required": ["stageId"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["id", "from", "to"],
+  "additionalProperties": false
+}

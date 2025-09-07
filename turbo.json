@@ -1,0 +1,163 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [
+    "**/.env.*local",
+    ".env",
+    "tsconfig.json",
+    "package.json"
+  ],
+  "globalEnv": [
+    "NODE_ENV",
+    "CI",
+    "VERCEL_ENV"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "src/**/*.{ts,tsx,js,jsx}",
+        "package.json",
+        "tsconfig.json",
+        "*.config.{js,ts,mjs,cjs}",
+        "!**/*.test.{ts,tsx,js,jsx}",
+        "!**/*.spec.{ts,tsx,js,jsx}"
+      ],
+      "outputs": [
+        "dist/**",
+        "build/**",
+        ".next/**",
+        "!.next/cache/**"
+      ],
+      "cache": true
+    },
+    "dev": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "src/**/*.{ts,tsx,js,jsx}",
+        "package.json",
+        "tsconfig.json",
+        "*.config.{js,ts,mjs,cjs}",
+        "public/**",
+        "assets/**"
+      ],
+      "cache": false,
+      "persistent": true
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "src/**/*.{ts,tsx,js,jsx}",
+        "test/**/*.{ts,tsx,js,jsx}",
+        "__tests__/**/*.{ts,tsx,js,jsx}",
+        "**/*.test.{ts,tsx,js,jsx}",
+        "**/*.spec.{ts,tsx,js,jsx}",
+        "package.json",
+        "tsconfig.json",
+        "vitest.config.{ts,js,mjs,cjs}",
+        "jest.config.{ts,js,mjs,cjs}"
+      ],
+      "outputs": [
+        "coverage/**",
+        "test-results/**",
+        ".vitest/**"
+      ],
+      "cache": true
+    },
+    "test:watch": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "src/**/*.{ts,tsx,js,jsx}",
+        "test/**/*.{ts,tsx,js,jsx}",
+        "__tests__/**/*.{ts,tsx,js,jsx}",
+        "**/*.test.{ts,tsx,js,jsx}",
+        "**/*.spec.{ts,tsx,js,jsx}",
+        "package.json",
+        "tsconfig.json",
+        "vitest.config.{ts,js,mjs,cjs}",
+        "jest.config.{ts,js,mjs,cjs}"
+      ],
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "inputs": [
+        "src/**/*.{ts,tsx,js,jsx}",
+        "test/**/*.{ts,tsx,js,jsx}",
+        "__tests__/**/*.{ts,tsx,js,jsx}",
+        "**/*.test.{ts,tsx,js,jsx}",
+        "**/*.spec.{ts,tsx,js,jsx}",
+        "package.json",
+        "tsconfig.json",
+        ".eslintrc.{js,json,yml,yaml}",
+        "eslint.config.{js,ts,mjs,cjs}",
+        ".eslintignore"
+      ],
+      "cache": true
+    },
+    "lint:fix": {
+      "inputs": [
+        "src/**/*.{ts,tsx,js,jsx}",
+        "test/**/*.{ts,tsx,js,jsx}",
+        "__tests__/**/*.{ts,tsx,js,jsx}",
+        "**/*.test.{ts,tsx,js,jsx}",
+        "**/*.spec.{ts,tsx,js,jsx}",
+        "package.json",
+        "tsconfig.json",
+        ".eslintrc.{js,json,yml,yaml}",
+        "eslint.config.{js,ts,mjs,cjs}",
+        ".eslintignore"
+      ],
+      "cache": false
+    },
+    "format": {
+      "inputs": [
+        "src/**/*.{ts,tsx,js,jsx,json,md,yaml,yml}",
+        "test/**/*.{ts,tsx,js,jsx,json,md,yaml,yml}",
+        "__tests__/**/*.{ts,tsx,js,jsx,json,md,yaml,yml}",
+        "**/*.{ts,tsx,js,jsx,json,md,yaml,yml}",
+        "package.json",
+        ".prettierrc",
+        ".prettierrc.{js,json,yml,yaml}",
+        "prettier.config.{js,ts,mjs,cjs}",
+        ".prettierignore"
+      ],
+      "cache": true
+    },
+    "format:check": {
+      "inputs": [
+        "src/**/*.{ts,tsx,js,jsx,json,md,yaml,yml}",
+        "test/**/*.{ts,tsx,js,jsx,json,md,yaml,yml}",
+        "__tests__/**/*.{ts,tsx,js,jsx,json,md,yaml,yml}",
+        "**/*.{ts,tsx,js,jsx,json,md,yaml,yml}",
+        "package.json",
+        ".prettierrc",
+        ".prettierrc.{js,json,yml,yaml}",
+        "prettier.config.{js,ts,mjs,cjs}",
+        ".prettierignore"
+      ],
+      "cache": true
+    },
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "inputs": [
+        "src/**/*.{ts,tsx}",
+        "test/**/*.{ts,tsx}",
+        "__tests__/**/*.{ts,tsx}",
+        "**/*.test.{ts,tsx}",
+        "**/*.spec.{ts,tsx}",
+        "package.json",
+        "tsconfig.json",
+        "tsconfig.*.json"
+      ],
+      "cache": true
+    },
+    "clean": {
+      "inputs": [],
+      "outputs": [],
+      "cache": false
+    }
+  },
+  "remoteCache": {
+    "enabled": false
+  }
+}

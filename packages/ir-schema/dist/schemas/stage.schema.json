@@ -1,0 +1,67 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://gapjunction.dev/schemas/stage.schema.json",
+    "title": "GapJunction Stage",
+    "description": "A placed Nexon instance in a channel IR.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "UI slug, unique within the channel (e.g., 'tcp_in_1').",
+            "minLength": 1
+        },
+        "title": {
+            "type": "string",
+            "description": "Optional friendly label."
+        },
+        "description": {
+            "type": "string",
+            "description": "Optional description of the nexon in context of the channel."
+        },
+        "iconUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "Optional URL for nexon icon/logo."
+        },
+        "nexonId": {
+            "type": "string",
+            "description": "Catalog ID of the Nexon template (e.g., 'tcp.listener').",
+            "minLength": 1
+        },
+        "nexonVersion": {
+            "type": "string",
+            "description": "Semantic version or tag for the template."
+        },
+        "documentation": {
+            "type": "string",
+            "description": "Optional full markdown documentation for this stage."
+        },
+        "params": {
+            "type": "object",
+            "description": "Parameter values for this Nexon instance.",
+            "additionalProperties": {
+                "$ref": "./params.schema.json"
+            }
+        },
+        "continuation": {
+            "type": "object",
+            "description": "Where to attach next stages for poly-node templates.",
+            "properties": {
+                "outlet": { "type": "string" }
+            },
+            "additionalProperties": false
+        },
+        "position": {
+            "type": "object",
+            "description": "Canvas coordinates for UI layout (ignored by compiler).",
+            "properties": {
+                "x": { "type": "number" },
+                "y": { "type": "number" }
+            },
+            "required": ["x", "y"],
+            "additionalProperties": false
+        }
+    },
+    "required": ["id", "nexonId"],
+    "additionalProperties": false
+}

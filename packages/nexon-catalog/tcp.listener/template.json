@@ -1,0 +1,49 @@
+[
+  {
+    "id": "tcp-in-node",
+    "type": "tcp in",
+    "z": "{{flow.id}}",
+    "name": "{{stage.title || 'TCP Listener'}}",
+    "server": "{{params.server || 'server'}}",
+    "host": "{{params.host || 'localhost'}}",
+    "port": "{{params.port}}",
+    "datamode": "{{params.datamode || 'stream'}}",
+    "datatype": "buffer",
+    "newline": "{{params.newline || ''}}",
+    "topic": "",
+    "base64": "{{params.base64 || false}}",
+    "x": 150,
+    "y": 200,
+    "wires": [["data-processor-node", "connection-monitor-node"]]
+  },
+  {
+    "id": "data-processor-node",
+    "type": "function",
+    "z": "{{flow.id}}",
+    "name": "Process TCP Data",
+    "func": "// Process incoming TCP data\nconst tcpData = {\n    timestamp: new Date().toISOString(),\n    source: {\n        host: msg._session ? msg._session.remoteAddress : 'unknown',\n        port: msg._session ? msg._session.remotePort : 'unknown'\n    },\n    data: msg.payload,\n    dataType: typeof msg.payload,\n    length: Buffer.isBuffer(msg.payload) ? msg.payload.length : JSON.stringify(msg.payload).length\n};\n\n// Add metadata\nmsg.tcp = tcpData;\nmsg.originalPayload = msg.payload;\nmsg.payload = tcpData;\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 300,
+    "y": 180,
+    "wires": [[]]
+  },
+  {
+    "id": "connection-monitor-node",
+    "type": "function",
+    "z": "{{flow.id}}",
+    "name": "Monitor Connections",
+    "func": "// Monitor TCP connection events\nif (msg._session) {\n    const connectionEvent = {\n        timestamp: new Date().toISOString(),\n        event: 'data_received',\n        connection: {\n            remoteAddress: msg._session.remoteAddress,\n            remotePort: msg._session.remotePort,\n            localAddress: msg._session.localAddress,\n            localPort: msg._session.localPort\n        },\n        dataLength: Buffer.isBuffer(msg.payload) ? msg.payload.length : JSON.stringify(msg.payload).length\n    };\n    \n    msg.payload = connectionEvent;\n    return msg;\n}\n\nreturn null;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 300,
+    "y": 220,
+    "wires": [[]]
+  }
+]

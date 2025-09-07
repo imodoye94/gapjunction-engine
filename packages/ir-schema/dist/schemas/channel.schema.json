@@ -1,0 +1,93 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://gapjunction.dev/schemas/channel.schema.json",
+    "title": "GapJunction Channel IR",
+    "description": "Root IR document describing a channel: stages and their wiring.",
+    "type": "object",
+    "properties": {
+        "version": {
+            "description": "Schema version of the Channel IR. Must be 1 for this release.",
+            "const": 1
+        },
+        "channelId": {
+            "type": "string",
+            "description": "Stable channel identifier.",
+            "minLength": 1
+        },
+        "title": {
+            "type": "string",
+            "description": "Human-friendly title.",
+            "minLength": 1
+        },
+        "runtime": {
+            "type": "object",
+            "description": "Intended runtime target for this channel.",
+            "properties": {
+                "target": {
+                    "type": "string",
+                    "enum": ["onprem", "cloud"]
+                }
+            },
+            "required": ["target"],
+            "additionalProperties": false
+        },
+        "security": {
+            "type": "object",
+            "description": "Security intent hints for compiler/agent guardrails (all default to false).",
+            "properties": {
+                "allowInternetHttpOut": { "type": "boolean" },
+                "allowInternetTcpOut": { "type": "boolean" },
+                "allowInternetUdpOut": { "type": "boolean" },
+                "allowHttpInPublic": { "type": "boolean" }
+            },
+            "additionalProperties": false
+        },
+        "stages": {
+            "type": "array",
+            "description": "Placed Nexon instances on the canvas.",
+            "items": { "$ref": "./stage.schema.json" },
+            "minItems": 1
+        },
+        "edges": {
+            "type": "array",
+            "description": "Directed wires between stage ports.",
+            "items": { "$ref": "./edge.schema.json" },
+            "minItems": 0
+        },
+        "documentation": {
+            "type": "string",
+            "description": "Optional markdown documentation describing the channel."
+        },
+        "metadata": {
+            "type": "object",
+            "description": "Free-form annotations for editor/linters/future features.",
+            "additionalProperties": true
+        }
+    },
+    "required": ["version", "channelId", "title", "runtime", "stages", "edges"],
+    "additionalProperties": false,
+    "allOf": [
+        {
+            "description": "Ensure stage IDs are unique within the channel.",
+            "if": { "properties": { "stages": { "type": "array" } } },
+            "then": {
+                "properties": {
+                    "stages": {
+                        "uniqueItems": true
+                    }
+                }
+            }
+        },
+        {
+            "description": "Ensure edge IDs are unique within the channel.",
+            "if": { "properties": { "edges": { "type": "array" } } },
+            "then": {
+                "properties": {
+                    "edges": {
+                        "uniqueItems": true
+                    }
+                }
+            }
+        }
+    ]
+}

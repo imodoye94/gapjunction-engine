@@ -1,0 +1,4 @@
+
+> @gapjunction/ws-protocol@0.1.0 typecheck C:\Users\PC\Desktop\gapjunction-engine\packages\ws-protocol
+> tsc -p tsconfig.json --noEmit
+

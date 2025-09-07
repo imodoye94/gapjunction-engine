@@ -1,0 +1,52 @@
+[
+  {
+    "id": "input-prep-node",
+    "type": "function",
+    "z": "{{flow.id}}",
+    "name": "Prepare Request",
+    "func": "// Prepare HTTP request\nconst headers = {{JSON.stringify(params.headers || {})}};\nconst payload = {{JSON.stringify(params.payload || null)}};\n\n// Add API key to headers if provided\nif ({{params.apiKey ? 'true' : 'false'}}) {\n    headers['Authorization'] = 'Bearer ' + {{params.apiKey ? 'flow.get(\"apiKey\")' : 'null'}};\n}\n\n// Set headers\nmsg.headers = headers;\n\n// Set payload if provided\nif (payload !== null) {\n    msg.payload = payload;\n}\n\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 100,
+    "y": 200,
+    "wires": [["http-request-node"]]
+  },
+  {
+    "id": "http-request-node",
+    "type": "http request",
+    "z": "{{flow.id}}",
+    "name": "{{stage.title || 'HTTP Request'}}",
+    "method": "{{params.method || 'GET'}}",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "{{params.url}}",
+    "tls": "",
+    "persist": false,
+    "proxy": "",
+    "authType": "{{params.apiKey ? 'bearer' : ''}}",
+    "senderr": false,
+    "headers": "{{params.headers || {}}}",
+    "timeout": "{{params.timeout || 30000}}",
+    "x": 200,
+    "y": 200,
+    "wires": [["output-node"]]
+  },
+  {
+    "id": "output-node",
+    "type": "function",
+    "z": "{{flow.id}}",
+    "name": "Process Response",
+    "func": "// Process HTTP response\nconst response = {\n    statusCode: msg.statusCode,\n    headers: msg.headers,\n    payload: msg.payload,\n    responseUrl: msg.responseUrl\n};\n\n// Handle errors\nif (msg.statusCode >= 400) {\n    node.error(`HTTP ${msg.statusCode}: ${msg.payload}`, msg);\n    return null;\n}\n\n// Return successful response\nmsg.payload = response;\nreturn msg;",
+    "outputs": 1,
+    "noerr": 0,
+    "initialize": "",
+    "finalize": "",
+    "libs": [],
+    "x": 300,
+    "y": 200,
+    "wires": [[]]
+  }
+]

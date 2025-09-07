@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gapjunction.dev/schemas/bundle-manifest.schema.json",
+  "title": "GapJunction BundleManifest",
+  "description": "Minimal manifest describing compiler output bundle for the Agent.",
+  "type": "object",
+  "properties": {
+    "version": { "const": 1 },
+    "channelId": { "type": "string", "minLength": 1 },
+    "buildId": { "type": "string", "minLength": 1 },
+    "mode": { "enum": ["TEST", "PROD"] },
+    "artifacts": {
+      "type": "object",
+      "properties": {
+        "flowsJsonPath": { "type": "string", "minLength": 1 },
+        "settingsPath": { "type": "string", "minLength": 1 },
+        "credentialsMapPath": { "type": "string", "minLength": 1 }
+      },
+      "required": ["flowsJsonPath", "settingsPath"],
+      "additionalProperties": false
+    }
+  },
+  "required": ["version", "channelId", "buildId", "mode", "artifacts"],
+  "additionalProperties": false
+}

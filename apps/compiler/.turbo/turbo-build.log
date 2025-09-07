@@ -1,0 +1,38 @@
+
+> @gapjunction/compiler@0.1.0 build C:\Users\PC\Desktop\gapjunction-engine\apps\compiler
+> tsc -p tsconfig.json
+
+src/services/artifacts.service.ts(1,61): error TS2307: Cannot find module '@gapjunction/ir-schema' or its corresponding type declarations.
+src/services/bundling.service.ts(2,10): error TS2724: '"tar"' has no exported member named 'pack'. Did you mean 'Pack'?
+src/services/bundling.service.ts(146,50): error TS2339: Property 'content' does not exist on type '{ name: string; stream: Readable; }'.
+src/services/bundling.service.ts(167,33): error TS7006: Parameter 'error' implicitly has an 'any' type.
+src/services/compiler.service.ts(2,32): error TS2307: Cannot find module '@gapjunction/ir-schema' or its corresponding type declarations.
+src/services/compiler.service.ts(103,9): error TS2375: Type '{ success: false; buildId: string; validation: ChannelValidationResult; policyLint: { passed: false; violations: never[]; summary: { errors: number; warnings: number; info: number; }; }; errors: string[] | undefined; }' is not assignable to type 'CompileResult' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'errors' are incompatible.
+    Type 'string[] | undefined' is not assignable to type 'string[]'.
+      Type 'undefined' is not assignable to type 'string[]'.
+src/services/compiler.service.ts(158,60): error TS2379: Argument of type '{ buildId: string; orgId: string | undefined; userId: string | undefined; channel: any; policyLint: PolicyLintResult; }' is not assignable to parameter of type '{ buildId: string; orgId?: string; userId?: string; channel: ChannelIR; policyLint: PolicyLintResult; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'orgId' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+src/services/compiler.service.ts(201,9): error TS2375: Type '{ orgId: string | undefined; userId: string | undefined; runtime: { target: any; mode: string; }; linting: { errors: number; warnings: number; info: number; }; }' is not assignable to type '{ orgId?: string; userId?: string; runtime: { target: string; mode: string; }; linting: { errors: number; warnings: number; info: number; }; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'orgId' are incompatible.
+    Type 'string | undefined' is not assignable to type 'string'.
+      Type 'undefined' is not assignable to type 'string'.
+src/services/nexon-template.service.ts(48,5): error TS2412: Type 'string | undefined' is not assignable to type 'string' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the type of the target.
+  Type 'undefined' is not assignable to type 'string'.
+src/services/nexon-template.service.ts(114,7): error TS2375: Type '{ valid: boolean; errors: string[] | undefined; }' is not assignable to type 'TemplateValidationResult' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'errors' are incompatible.
+    Type 'string[] | undefined' is not assignable to type 'string[]'.
+      Type 'undefined' is not assignable to type 'string[]'.
+src/services/policy.service.ts(1,70): error TS2307: Cannot find module '@gapjunction/ir-schema' or its corresponding type declarations.
+src/services/policy.service.ts(195,28): error TS7006: Parameter 'stage' implicitly has an 'any' type.
+src/services/policy.service.ts(291,54): error TS7006: Parameter 'stage' implicitly has an 'any' type.
+src/services/policy.service.ts(314,50): error TS7006: Parameter 'stage' implicitly has an 'any' type.
+src/services/policy.service.ts(360,19): error TS2551: Property 'error' does not exist on type '{ errors: number; warnings: number; info: number; }'. Did you mean 'errors'?
+src/services/validation.service.ts(9,8): error TS2307: Cannot find module '@gapjunction/ir-schema' or its corresponding type declarations.
+src/services/validation.service.ts(188,5): error TS2375: Type '{ warnings: string[] | undefined; channel?: ChannelIR; valid: boolean; errors?: string[]; }' is not assignable to type 'ChannelValidationResult' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.
+  Types of property 'warnings' are incompatible.
+    Type 'string[] | undefined' is not assignable to type 'string[]'.
+      Type 'undefined' is not assignable to type 'string[]'.
+ ELIFECYCLE  Command failed with exit code 2.

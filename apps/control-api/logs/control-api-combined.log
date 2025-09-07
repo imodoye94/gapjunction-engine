@@ -1,0 +1,7 @@
+{"level":"warn","message":"Supabase configuration missing, some features will be disabled","timestamp":"2025-09-06T20:37:37.155Z"}
+{"level":"info","message":"Socket.IO server initialized","timestamp":"2025-09-06T20:41:45.371Z"}
+{"level":"info","message":"🚀 Control API service is running on: http://0.0.0.0:3002","timestamp":"2025-09-06T20:41:45.712Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3002/api","timestamp":"2025-09-06T20:41:45.727Z"}
+{"level":"info","message":"🔌 WebSocket server listening for agent connections","timestamp":"2025-09-06T20:41:45.729Z"}
+{"level":"error","message":"Compiler response error:","timestamp":"2025-09-06T20:45:41.186Z"}
+{"error":"","level":"warn","message":"Compiler health check failed","timestamp":"2025-09-06T20:45:41.191Z"}

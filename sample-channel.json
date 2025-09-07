@@ -1,0 +1,62 @@
+{
+  "channelId": "sample-channel-001",
+  "title": "Sample Integration Channel",
+  "description": "A simple test channel for the compiler service",
+  "documentation": "This is a test channel with basic HTTP request functionality",
+  "version": "1.0.0",
+  "runtime": {
+    "target": "onprem",
+    "mode": "TEST"
+  },
+  "security": {
+    "allowInternetHttpOut": true,
+    "allowInternetTcpOut": false,
+    "allowInternetUdpOut": false,
+    "allowHttpInPublic": false
+  },
+  "stages": [
+    {
+      "id": "http-request-stage",
+      "title": "HTTP API Request",
+      "nexonId": "http.request",
+      "nexonVersion": "1.0.0",
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "params": {
+        "url": "https://jsonplaceholder.typicode.com/posts/1",
+        "method": "GET",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      }
+    },
+    {
+      "id": "transform-stage",
+      "title": "Transform Response",
+      "nexonId": "transform.json",
+      "nexonVersion": "1.0.0",
+      "position": {
+        "x": 300,
+        "y": 100
+      },
+      "params": {
+        "expression": "msg.payload.title"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-1",
+      "from": {
+        "stageId": "http-request-stage",
+        "outlet": "default"
+      },
+      "to": {
+        "stageId": "transform-stage",
+        "inlet": "default"
+      }
+    }
+  ]
+}

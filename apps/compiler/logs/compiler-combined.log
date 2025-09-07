@@ -1,0 +1,122 @@
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T14:37:25.199Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T14:37:25.209Z"}
+{"acknowledgedCount":0,"hasChannel":true,"level":"info","message":"Received compile request","orgId":"test-org","timestamp":"2025-09-06T14:39:36.384Z","userId":"test-user"}
+{"buildId":"01K4FQFTE4WVSAMEG8Y90EZ0Y1","errorCount":3,"level":"info","message":"Compile request completed","success":false,"timestamp":"2025-09-06T14:39:36.400Z","warningCount":0}
+{"acknowledgedCount":0,"hasChannel":true,"level":"info","message":"Received compile request","orgId":"test-org","timestamp":"2025-09-06T14:40:27.996Z","userId":"test-user"}
+{"buildId":"01K4FQHCTYDXVKX9R6744VT2ZH","errorCount":1,"level":"info","message":"Compile request completed","success":false,"timestamp":"2025-09-06T14:40:28.055Z","warningCount":0}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T14:47:39.738Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T14:47:39.748Z"}
+{"acknowledgedCount":0,"hasChannel":true,"level":"info","message":"Received compile request","orgId":"test-org","timestamp":"2025-09-06T14:48:15.781Z","userId":"test-user"}
+{"buildId":"01K4FQZNN7A8891BZ4N6EFD5HH","errorCount":0,"level":"info","message":"Compile request completed","success":true,"timestamp":"2025-09-06T14:48:15.857Z","warningCount":3}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T14:49:02.525Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T14:49:02.533Z"}
+{"acknowledgedCount":0,"hasChannel":true,"level":"info","message":"Received compile request","orgId":"test-org","timestamp":"2025-09-06T14:49:31.044Z","userId":"test-user"}
+{"buildId":"01K4FR1Z567RX48S959KQWKAYH","errorCount":0,"level":"info","message":"Compile request completed","success":true,"timestamp":"2025-09-06T14:49:31.130Z","warningCount":3}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T14:59:49.380Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T14:59:49.390Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:00:10.369Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:00:10.379Z"}
+{"acknowledgedCount":0,"hasChannel":true,"level":"info","message":"Received compile request","orgId":"test-org","timestamp":"2025-09-06T15:00:56.370Z","userId":"test-user"}
+{"buildId":"01K4FRPWDN3JEC46XYP9VJ3752","errorCount":0,"level":"info","message":"Compile request completed","success":true,"timestamp":"2025-09-06T15:00:56.443Z","warningCount":3}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:09:22.416Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:09:22.425Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:10:26.007Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:10:26.018Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:11:25.068Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:11:25.076Z"}
+{"acknowledgedCount":0,"hasChannel":true,"level":"info","message":"Received compile request","orgId":"test-org","timestamp":"2025-09-06T15:13:51.408Z","userId":"test-user"}
+{"buildId":"01K4FSEH9KFARNZFYV5BGWC4YA","errorCount":0,"level":"info","message":"Compile request completed","success":true,"timestamp":"2025-09-06T15:13:51.496Z","warningCount":3}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:14:34.940Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:14:34.948Z"}
+{"acknowledgedCount":0,"hasChannel":true,"level":"info","message":"Received compile request","orgId":"test-org","timestamp":"2025-09-06T15:14:50.279Z","userId":"test-user"}
+{"buildId":"01K4FSGASBHGYA688VTSAYKKZB","errorCount":0,"level":"info","message":"Compile request completed","success":true,"timestamp":"2025-09-06T15:14:50.375Z","warningCount":3}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:32:13.187Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:32:13.195Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:32:28.195Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:32:28.205Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:34:13.521Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:34:13.534Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:36:01.929Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:36:01.942Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:36:58.407Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:36:58.414Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:38:49.655Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:38:49.662Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:40:22.371Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:40:22.381Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:41:05.982Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:41:05.989Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:41:39.312Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:41:39.321Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:41:56.576Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:41:56.585Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:45:11.076Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:45:11.085Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:45:36.296Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:45:36.306Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:46:11.815Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:46:11.822Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:46:35.477Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:46:35.484Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:46:57.488Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:46:57.497Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:47:31.371Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:47:31.378Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:48:01.025Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:48:01.036Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:51:33.044Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:51:33.051Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:51:59.698Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:51:59.708Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:53:42.054Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:53:42.065Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:54:38.752Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:54:38.760Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:55:10.743Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:55:10.751Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:55:25.783Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:55:25.791Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:55:43.199Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:55:43.209Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:56:59.820Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:56:59.826Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:58:15.528Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:58:15.536Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T15:59:17.067Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T15:59:17.074Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:00:08.640Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:00:08.649Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:00:29.951Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:00:29.958Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:00:48.719Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:00:48.728Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:01:19.108Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:01:19.115Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:02:19.868Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:02:19.880Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:04:40.089Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:04:40.099Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:05:29.395Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:05:29.404Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:05:53.167Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:05:53.175Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:07:01.757Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:07:01.765Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:07:09.106Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:07:09.116Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:11:52.024Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:11:52.030Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:13:11.274Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:13:11.282Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:13:53.629Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:13:53.637Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:14:15.940Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:14:15.947Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:16:37.614Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:16:37.625Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:17:36.281Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:17:36.288Z"}
+{"level":"info","message":"🚀 Compiler service is running on: http://0.0.0.0:3001","timestamp":"2025-09-06T16:19:56.723Z"}
+{"level":"info","message":"📚 API documentation available at: http://0.0.0.0:3001/api","timestamp":"2025-09-06T16:19:56.732Z"}
+{"acknowledgedCount":0,"hasChannel":true,"level":"info","message":"Received compile request","orgId":"test-org","timestamp":"2025-09-06T16:21:36.701Z","userId":"test-user"}
+{"buildId":"01K4FXAKA05J78C3CRVVRS3BY3","errorCount":0,"level":"info","message":"Compile request completed","success":true,"timestamp":"2025-09-06T16:21:36.812Z","warningCount":3}

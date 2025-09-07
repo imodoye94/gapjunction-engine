@@ -1,0 +1,4 @@
+
+> @gapjunction/ir-schema@0.1.0 build C:\Users\PC\Desktop\gapjunction-engine\packages\ir-schema
+> tsc -p tsconfig.json
+

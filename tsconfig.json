@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    // Target and Module Configuration
+    "target": "ES2022",
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    
+    // Output Configuration
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "importHelpers": true,
+    
+    // Module Resolution
+    "baseUrl": ".",
+    "paths": {
+      "@gapjunction/ir-schema": ["./packages/ir-schema/src"],
+      "@gapjunction/ir-schema/*": ["./packages/ir-schema/src/*"],
+      "@gapjunction/ws-protocol": ["./packages/ws-protocol/src"],
+      "@gapjunction/ws-protocol/*": ["./packages/ws-protocol/src/*"],
+      "@gapjunction/redactor-core": ["./packages/redactor-core/src"],
+      "@gapjunction/redactor-core/*": ["./packages/redactor-core/src/*"],
+      "@gapjunction/gj-spool-in": ["./packages/gj-spool-in/src"],
+      "@gapjunction/gj-spool-in/*": ["./packages/gj-spool-in/src/*"]
+    },
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    
+    // Type Checking - Healthcare/Enterprise Grade Strict Settings
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    
+    // Additional Strict Checks for Security
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    
+    // Emit Configuration
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+    
+    // Interop Constraints
+    "isolatedModules": true,
+    "verbatimModuleSyntax": false,
+    
+    // Node.js Specific
+    "types": ["node", "vitest/globals"],
+    "moduleDetection": "force"
+  },
+  "include": [
+    "src/**/*",
+    "apps/*/src/**/*",
+    "packages/*/src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "coverage",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/__tests__/**",
+    "**/__mocks__/**"
+  ],
+  "references": [
+    { "path": "./apps/control-api" },
+    { "path": "./apps/compiler" },
+    { "path": "./apps/agent" },
+    { "path": "./packages/ir-schema" },
+    { "path": "./packages/ws-protocol" },
+    { "path": "./packages/redactor-core" },
+    { "path": "./packages/gj-spool-in" }
+  ],
+  "compileOnSave": false
+}
