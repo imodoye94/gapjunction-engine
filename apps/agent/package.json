@@ -1,0 +1,62 @@
+{
+  "name": "@gapjunction/agent",
+  "version": "0.1.0",
+  "description": "GapJunction Runtime Agent - Long-running daemon for executing integration workflows",
+  "private": true,
+  "license": "MPL-2.0",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "start:dev": "tsx watch src/main.ts",
+    "start:debug": "tsx --inspect-brk src/main.ts",
+    "start:prod": "node dist/main.js",
+    "start:service": "node dist/main.js --service",
+    "lint": "eslint \"{src,test}/**/*.ts\" --fix",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:cov": "vitest run --coverage",
+    "test:debug": "vitest --inspect-brk --no-coverage",
+    "format:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format:write": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@gapjunction/ws-protocol": "workspace:*",
+    "@gapjunction/ir-schema": "workspace:*",
+    "@napi-rs/keyring": "^1.2.0",
+    "aedes": "^0.51.3",
+    "aedes-server-factory": "^0.1.3",
+    "cosmiconfig": "^9.0.0",
+    "get-port": "^7.1.0",
+    "jose": "^5.9.6",
+    "msgpackr": "^1.11.0",
+    "pino": "^9.4.0",
+    "pino-pretty": "^11.2.2",
+    "rimraf": "^6.0.1",
+    "tar-stream": "^3.1.7",
+    "tweetnacl": "^1.0.3",
+    "ws": "^8.18.0",
+    "yaml": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.2",
+    "@types/tar-stream": "^3.1.4",
+    "@types/ws": "^8.5.12",
+    "tsx": "^4.20.5",
+    "typescript": "^5.1.3",
+    "vitest": "^1.3.1"
+  },
+  "keywords": [
+    "agent",
+    "runtime",
+    "daemon",
+    "node-red",
+    "mqtt",
+    "websocket",
+    "healthcare",
+    "integration",
+    "gapjunction"
+  ]
+}
