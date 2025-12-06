@@ -4,7 +4,7 @@ An open-source AI-native data integration engine for healthcare and life science
 
 ## Overview
 
-GapJunction is a comprehensive data integration platform and workflow automation engine (think, Corepoint + Zapier) that enables seamless data exchange between healthcare systems and automates manual back-office tasks for healthcare and life science businesses - Hospitals, Clinics, Laboratories, Digital Health Statups, Biotechnology companies, Contract Research Organizations etc. Basically anyone who handles sensitive patient-related data (other business can use it for sure, but it is designed with handling sensitive patient data in mind). It provides AI-powered data mapping and transformations, real-time data processing, hardware + software integrations, and secure data handling to bridge the gaps in healthcare data interoperability.
+GapJunction is a comprehensive data integration platform and workflow automation engine (think, Mirth Connect + Zapier) that enables seamless data exchange between healthcare systems and automates manual back-office tasks for healthcare and life science businesses - Hospitals, Clinics, Laboratories, Digital Health Statups, Biotechnology companies, Contract Research Organizations etc. Basically anyone in healthcare. It provides AI-powered data mapping and transformations, real-time data processing, hardware + software integrations, and secure data handling to bridge the gaps in healthcare data interoperability.
 
 ## Architecture
 
